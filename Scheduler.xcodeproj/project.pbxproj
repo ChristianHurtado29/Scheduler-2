@@ -17,8 +17,6 @@
 		571258932385AD0100805579 /* CreateEventController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 571258922385AD0100805579 /* CreateEventController.swift */; };
 		571258952385B4BC00805579 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 571258942385B4BC00805579 /* Event.swift */; };
 		5779F98D23D3310F000D3444 /* CompletedScheduleController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5779F98C23D3310F000D3444 /* CompletedScheduleController.swift */; };
-		57989B6923D9C02200BC195A /* FileManager+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57989B6823D9C02200BC195A /* FileManager+Extensions.swift */; };
-		57989B6B23D9C07100BC195A /* PersistenceHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57989B6A23D9C07100BC195A /* PersistenceHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,8 +31,6 @@
 		571258922385AD0100805579 /* CreateEventController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateEventController.swift; sourceTree = "<group>"; };
 		571258942385B4BC00805579 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		5779F98C23D3310F000D3444 /* CompletedScheduleController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompletedScheduleController.swift; sourceTree = "<group>"; };
-		57989B6823D9C02200BC195A /* FileManager+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FileManager+Extensions.swift"; sourceTree = "<group>"; };
-		57989B6A23D9C07100BC195A /* PersistenceHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,22 +64,12 @@
 		5712587D2385A80D00805579 /* Scheduler */ = {
 			isa = PBXGroup;
 			children = (
-				57989B6723D9C00100BC195A /* Data Persistence */,
 				57DD381323D1C9B4003586CD /* Model */,
 				57DD381223D1C9A9003586CD /* Controllers */,
 				57DD381123D1C999003586CD /* Supporting Files */,
 				5712588C2385A81000805579 /* Info.plist */,
 			);
 			path = Scheduler;
-			sourceTree = "<group>";
-		};
-		57989B6723D9C00100BC195A /* Data Persistence */ = {
-			isa = PBXGroup;
-			children = (
-				57989B6823D9C02200BC195A /* FileManager+Extensions.swift */,
-				57989B6A23D9C07100BC195A /* PersistenceHelper.swift */,
-			);
-			path = "Data Persistence";
 			sourceTree = "<group>";
 		};
 		57DD381123D1C999003586CD /* Supporting Files */ = {
@@ -197,9 +183,7 @@
 				571258832385A80D00805579 /* ScheduleListController.swift in Sources */,
 				5712587F2385A80D00805579 /* AppDelegate.swift in Sources */,
 				571258812385A80D00805579 /* SceneDelegate.swift in Sources */,
-				57989B6923D9C02200BC195A /* FileManager+Extensions.swift in Sources */,
 				571258952385B4BC00805579 /* Event.swift in Sources */,
-				57989B6B23D9C07100BC195A /* PersistenceHelper.swift in Sources */,
 				5779F98D23D3310F000D3444 /* CompletedScheduleController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
