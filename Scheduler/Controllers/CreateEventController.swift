@@ -35,6 +35,15 @@ class CreateEventController: UIViewController {
         updateUI()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(true)
+        // TODO: Call save function to persist data
+    }
+    
     private func updateUI() {
         if let event = event { // coming from didSelectRowAt (existing event)
             self.event = event

@@ -15,7 +15,7 @@ class ScheduleListController: UIViewController {
   // data - an array of events
   private var events = [Event]()
   
-  public let dataPersistence = DataPersistence(filename: "schedules.plist")
+    public let dataPersistence = DataPersistence<Event>(filename: "schedules.plist")
   
   private var isEditingTableView = false {
     didSet { // property observer
@@ -77,8 +77,12 @@ class ScheduleListController: UIViewController {
   
   private func update(oldEvent: Event, with newEvent: Event) {
     // update item in documents directory
-    
+    dataPersistence.update(oldEvent, with: newEvent)
     // call load items to update events array
+    // retrieve objects from documents directory
+    // append to our events array
+    // reload the table view
+    loadItems()
   }
   
   private func createNewEvent(event: Event) {
