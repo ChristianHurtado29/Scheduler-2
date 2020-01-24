@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		13DFFDA823DB5317000CF20F /* DataPersistence in Frameworks */ = {isa = PBXBuildFile; productRef = 13DFFDA723DB5317000CF20F /* DataPersistence */; };
 		5712587F2385A80D00805579 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5712587E2385A80D00805579 /* AppDelegate.swift */; };
 		571258812385A80D00805579 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 571258802385A80D00805579 /* SceneDelegate.swift */; };
 		571258832385A80D00805579 /* ScheduleListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 571258822385A80D00805579 /* ScheduleListController.swift */; };
@@ -41,6 +42,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				13DFFDA823DB5317000CF20F /* DataPersistence in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -131,6 +133,7 @@
 			);
 			name = Scheduler;
 			packageProductDependencies = (
+				13DFFDA723DB5317000CF20F /* DataPersistence */,
 			);
 			productName = Scheduler;
 			productReference = 5712587B2385A80D00805579 /* Scheduler.app */;
@@ -161,6 +164,7 @@
 			);
 			mainGroup = 571258722385A80D00805579;
 			packageReferences = (
+				13DFFDA623DB5317000CF20F /* XCRemoteSwiftPackageReference "DataPersistence" */,
 			);
 			productRefGroup = 5712587C2385A80D00805579 /* Products */;
 			projectDirPath = "";
@@ -394,6 +398,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		13DFFDA623DB5317000CF20F /* XCRemoteSwiftPackageReference "DataPersistence" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/alexpaul/DataPersistence";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.1.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		13DFFDA723DB5317000CF20F /* DataPersistence */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 13DFFDA623DB5317000CF20F /* XCRemoteSwiftPackageReference "DataPersistence" */;
+			productName = DataPersistence;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 571258732385A80D00805579 /* Project object */;
 }

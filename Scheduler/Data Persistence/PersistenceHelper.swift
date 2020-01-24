@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import DataPersistence
 
 public enum DataPersistenceError: Error {
   case propertyListEncodingError(Error)
