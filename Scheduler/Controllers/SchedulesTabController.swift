@@ -28,12 +28,15 @@ class SchedulesTabController: UITabBarController {
     // first we got access to the UINavigationController
     // then we access the first view controller
     private lazy var completedLabController: UINavigationController = {
-        guard let labController = storyboard?.instantiateViewController(identifier: "CompletedNavController") as? UINavigationController,
-            let completedNavController = labController.viewControllers.first as? CompletedScheduleController else {
+        guard let navController = storyboard?.instantiateViewController(identifier: "CompletedNavController") as? UINavigationController,
+            let completedNavController = navController.viewControllers.first as? CompletedScheduleController else {
                 fatalError("could not get controller")
         }
         // Set dataPersistence property
-        return labController
+        completedNavController.dataPersistence = dataPersistence
+        // step 4: set custom delegate - set delegate object
+        completedNavController.dataPersistence.delegate = completedNavController
+        return navController
     }()
 
     override func viewDidLoad() {
@@ -42,4 +45,10 @@ class SchedulesTabController: UITabBarController {
 
     }
     
+}
+
+extension SchedulesTabController: DataPersistenceDelegate {
+    func didDeleteItem<T>(_ persistenceHelper: DataPersistence<T>, item: T) where T : Decodable, T : Encodable, T : Equatable {
+        print("Item was deleted")
+    }
 }

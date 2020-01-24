@@ -36,12 +36,9 @@ class ScheduleListController: UIViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    
     print(FileManager.getDocumentsDirectory())
-    
     tableView.dataSource = self
     tableView.delegate = self
-    
     loadItems()
   }
   
@@ -182,6 +179,8 @@ extension ScheduleListController: UITableViewDelegate{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let event = events[indexPath.row]
         showCreateEventVC(event)
-        
+        }
+    func tableView(_ tableView: UITableView, titleForDeleteConfirmationButtonForRowAt indexPath: IndexPath) -> String? {
+        return "Completed"
     }
 }
