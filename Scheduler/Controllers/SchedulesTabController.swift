@@ -16,10 +16,12 @@ class SchedulesTabController: UITabBarController {
     
     private lazy var schedulesNavController: UINavigationController = {
         guard let navController = storyboard?.instantiateViewController(identifier: "SchedulesNavController") as? UINavigationController,
-            let schedulesListContorller = navController.viewControllers.first as? ScheduleListController else {
+            let schedulesListController = navController.viewControllers.first as? ScheduleListController else {
                 fatalError("could not load nav controller")
         }
-   //     schedulesListContorller.dataPersistence = DataPersistence
+        schedulesListController.dataPersistence = dataPersistence
+            
+//            .dataPersistence = dataPersistence
         // Set dataPersistence property
         return navController
     }()
